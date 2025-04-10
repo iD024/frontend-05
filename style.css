@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(30, 38%, 92%);
+  min-height: 100vh;
+}
+
+.box {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+h5,p {
+  color: hsl(228, 12%, 48%);
+}
+
+.buy-box {
+    display: flex;
+    gap:50px;
+    flex-wrap: wrap;
+}
+
+.buy-box .Discount-price {
+    font-size: 36px;
+    color: hsl(158, 36%, 37%);
+    font-weight: bold;
+}
+
+.buy-box .MRP-price {
+    color: hsl(228, 12%, 48%);
+    font-size: 15px;
+}
+
+.product-img {
+  position: relative;
+}
+
+.details {
+  padding: 10px;
+  max-width: 25em;
+}
