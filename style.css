@@ -4,19 +4,18 @@ product-img - the img
 details - having all the text content with the button inside
 buy - has the button and the pricing
 */
-
 * {
   margin: 0;
   padding: 0;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
 
-body {
+main {
   background-color: hsl(30, 38%, 92%);
   display: flex;
-  align-items: center;
   justify-content: center;
-  min-height: 100dvh; /*dynamic view port - change size with viewport*/
+  align-items: center;
+  height: 100vh;
 }
 
 .box {
@@ -65,8 +64,8 @@ p {
 
 .buy {
   display: flex;
-  align-items: center;
-  gap: 1rem;
+  align-items: start;
+  flex-direction: column;
   p {
     font-size: 1.9rem;
     font-family: "Fraunces", sans-serif;
@@ -74,10 +73,28 @@ p {
     color: hsl(158, 36%, 37%);
   }
   .realP {
-    
+    font-size: 1.9rem;
   }
   .fakeP{
     text-decoration: line-through;
     font-family: "Montserrat", sans-serif;
+    font-size: small;
+    color: hsl(228, 12%, 48%);
   }
+}
+
+button {
+  background-color: hsl(158, 36%, 37%);
+  color: hsl(0, 0%, 100%);
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  font-weight: 600;
+  border-radius: .5rem;
+  width: min(100%, 20rem);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: hsl(158, 42%, 18%);
 }
