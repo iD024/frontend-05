@@ -1,45 +1,83 @@
+/*
+box - main box with all content
+product-img - the img
+details - having all the text content with the button inside
+buy - has the button and the pricing
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing: border-box; */
+}
+
 body {
+  background-color: hsl(30, 38%, 92%);
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsl(30, 38%, 92%);
-  min-height: 100vh;
+  min-height: 100dvh; /*dynamic view port - change size with viewport*/
 }
 
 .box {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: row;
-  gap: 25px;
+  display: grid;
+  grid-template-columns: 1fr;
+  width: min(100%, 36.5rem);
+  border-radius: 0.5rem;
+  background-color: white;
 }
 
-h5,p {
-  color: hsl(228, 12%, 48%);
-}
+/* 1fr makes it column
+1fr 1fr makes it row*/
 
-.buy-box {
-    display: flex;
-    gap:50px;
-    flex-wrap: wrap;
-}
-
-.buy-box .Discount-price {
-    font-size: 36px;
-    color: hsl(158, 36%, 37%);
-    font-weight: bold;
-}
-
-.buy-box .MRP-price {
-    color: hsl(228, 12%, 48%);
-    font-size: 15px;
+@media (min-width: 32.5rem) {
+  .box {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .product-img {
-  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+@media screen and (min-width: 32.5rem) {
+  .product-img {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .details {
-  padding: 10px;
-  max-width: 25em;
+  padding: 2rem;
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: hsl(228, 12%, 48%);
+}
+
+.buy {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  p {
+    font-size: 1.9rem;
+    font-family: "Fraunces", sans-serif;
+    font-weight: 700;
+    color: hsl(158, 36%, 37%);
+  }
+  .realP {
+    
+  }
+  .fakeP{
+    text-decoration: line-through;
+    font-family: "Montserrat", sans-serif;
+  }
 }
